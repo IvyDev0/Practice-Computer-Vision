@@ -14,10 +14,10 @@ end
 
 % 去方差占比前90%，进一步降维
 weight = latent(:) / sum(latent);
-sumw = 0;
-for i = 1:size(latent)
-    sumw = sumw+weight(i);
-    if sumw > 0.9
+sumw(1) = weight(1);
+for i = 2:size(latent)
+    sumw(i) = sumw(i-1)+weight(i);
+    if sumw(i) > 0.9
         dimension = i;
         break
     end
