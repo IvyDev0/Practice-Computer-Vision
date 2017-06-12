@@ -137,14 +137,13 @@ plt.imshow(result.astype(np.uint8))
 plt.title('extract component')
 ```
 
-
-
 在命令行中输入如下指令即可运行上述程序：
 
 ```python
 !ls imgs
 !imgcat imgs/*
 ```
+
 
 
 #### 结果分析
